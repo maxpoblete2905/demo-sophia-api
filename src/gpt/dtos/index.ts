@@ -1,1 +1,1 @@
-export * from './orthograpy.dto'
+export * from './orthograpy.dto';
