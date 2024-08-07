@@ -46,7 +46,7 @@ async function bootstrap() {
 
   // Obtener el puerto de las variables de entorno y escuchar en ese puerto
   const port = configService.getOrThrow<string>('PORT');
-  await app.listen(port);
+  await app.listen(port, '0.0.0.0');
 
   console.log(`Application is running on: http://localhost:${port}`);
 }

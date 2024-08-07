@@ -10,5 +10,6 @@ export class AuthImplementationRepository implements AuthRepository {
   async resetPassword(email: string) {
     // const link = await admin.auth().generatePasswordResetLink(email);
     this.mailService.sendUserConfirmation(email, 'token', 'link');
+    console.log('enviando email');
   }
 }
