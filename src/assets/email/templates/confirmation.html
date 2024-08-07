@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restablecimiento de Contraseña</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap"
+    />
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        line-height: 30px;
+        color: #0c2447;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        position: relative;
+        width: 60%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .logo {
+        display: block;
+        width: 180px;
+        height: 45px;
+        margin: 0 auto 20px auto;
+      }
+      .button {
+        display: block;
+        width: 290px;
+        height: 38px;
+        padding: 14px 20px;
+        font-size: 16px;
+        color: #ffffff;
+        background-color: #d96704;
+        border-radius: 58px;
+        text-align: center;
+        line-height: 30px;
+        text-decoration: none;
+        margin: 0 auto;
+      }
+      .separator {
+        border: none;
+        border-top: 1px solid #0c2447;
+        margin: 10px 0;
+      }
+      .footer {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo mb40">
+        <img height="90px" src="cid:logo" alt="logo" />
+      </div>
+
+      <p>Hola, <strong>{{username}}</strong></p>
+      <p>Solicitaste restablecer tu contraseña, para continuar</p>
+      <p>Ingresa al siguiente link:</p>
+      <a href="{{url}}" class="button">Recuperar contraseña</a>
+      <p>Este link expira en 10 minutos.</p>
+      <p>No compartas este link.</p>
+      <p>Nunca te llamaremos para preguntarte por este link.</p>
+      <hr class="separator" />
+      <p class="footer">
+        Enviado por <strong>Sophia</strong>, tu asistente médico de confianza.
+      </p>
+    </div>
+  </body>
+</html>
