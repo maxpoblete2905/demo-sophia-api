@@ -19,7 +19,12 @@ export class AllExceptionsFilter implements ExceptionFilter {
   constructor(private readonly _httpAdapterHost: HttpAdapterHost) {}
 
   catch(exception: any, host: ArgumentsHost) {
-
+    if (
+      Object.values(Environment).indexOf(process.env.NODE_ENV) < 3 ||
+      process.env.DEBUG
+    ) {
+      Logger.error(exception.stack, 'AllExceptionsFilter');
+    }
 
     const error: HttpExceptionResponseError = {
       statusCode: HttpStatus.INTERNAL_SERVER_ERROR,

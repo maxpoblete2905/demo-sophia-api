@@ -18,7 +18,7 @@ import { MailService } from './mail.service';
         },
       },
       defaults: {
-        from: '"Nooo Reply" <noreply@example.com>', // Cambia esto por tu dirección de correo por defecto
+        from: '"No Reply" <noreply@example.com>', // Cambia esto por tu dirección de correo por defecto
       },
       template: {
         dir: join(__dirname, 'templates'),
@@ -29,7 +29,6 @@ import { MailService } from './mail.service';
       },
     }),
   ],
-
   providers: [MailService],
   exports: [MailService],
 })

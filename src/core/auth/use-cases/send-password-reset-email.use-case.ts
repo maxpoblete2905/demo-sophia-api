@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { EmailResetPasswordDto } from '../dtos/email-reset-password.dto';
 import { AuthRepository } from '../auth.repository';
-import { UseCase } from 'src/common/base/use-case';
+import { UseCase } from '../../../common/base/use-case';
 
 @Injectable()
 export class SendPasswordResetEmailUseCase
